@@ -11,7 +11,7 @@ on:
     types: [started]            
 
 jobs:
-  # Since we're allowing the workflow to be triggered with a star, only trigger if the repo owner performed
+  # Since we're allowing the workflow to be triggered with a star, only trigger if a collaborator performed
   # the action which triggered us (https://stackoverflow.com/questions/58933155/manual-workflow-triggers-in-github-actions/58965362#58965362)
   i-can-haz-access:
     runs-on: ubuntu-latest
