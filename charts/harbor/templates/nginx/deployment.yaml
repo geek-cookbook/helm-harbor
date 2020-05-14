@@ -24,7 +24,7 @@ spec:
         checksum/secret: {{ include (print $.Template.BasePath "/nginx/secret.yaml") . | sha256sum }}
         {{- end }}
         {{- if .Values.nginx.podAnnotations }}
-        annotations: {{- include "harbor.tplValue" (dict "value" .Values.nginx.podAnnotations "context" $) | nindent 8 }}
+        {{- include "harbor.tplValue" (dict "value" .Values.nginx.podAnnotations "context" $) | nindent 8 }}
         {{- end }}
     spec:
 {{- include "harbor.imagePullSecrets" . | indent 6 }}
